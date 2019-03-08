@@ -639,7 +639,7 @@ void bajaPaciente(nodo *&lista, int op){
 							//eliminar_act(actual,anterior,lista);
 							
 							if(auxBorrar==NULL){
-							gotoxy(29,18);cout<<"Paciente no existe: "<<matri<<endl;
+							gotoxy(29,18);cout<<"Paciente no existe: "<<matri<<endl; //Inecesario ya se comprobo que existe
 							}
 								else{
 									if(anterior==NULL){
@@ -659,11 +659,12 @@ void bajaPaciente(nodo *&lista, int op){
 							
 						}
       		actual=actual->sig;
+      		//Te falta aqui :  anterior=actual;
 			}
-					if(band=true){ 
+					if(band=true){//te falta un = 
       				}
          				else{
-             			gotoxy(29,5);cout<<"Paciente: "<<matri<<" NO Encontrado\n ";
+             			gotoxy(29,5);cout<<"Paciente: "<<matri<<" NO Encontrado\n ";//Este mensaje siempre se desplegara ya que nunca cambia band de true 
             			}
 	gotoxy(29,20);system("pause");							
 					//gotoxy(29,20);system("pause");
